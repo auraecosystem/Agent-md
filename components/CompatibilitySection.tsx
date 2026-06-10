@@ -128,6 +128,17 @@ const agents: AgentEntry[] = [
     url: "https://uipath.github.io/uipath-python",
     imageSrc: "/logos/uipath.svg",
   },
+  {
+    name: "Augment Code",
+    url: "https://docs.augmentcode.com/cli/overview",
+    imageSrc: "/logos/augment.svg",
+  },
+  {
+    name: "Junie",
+    from: "JetBrains",
+    url: "https://jetbrains.com/junie",
+    imageSrc: "/logos/junie.svg",
+  },
 ];
 
 const shuffleAgents = (items: AgentEntry[]) => {
@@ -258,11 +269,13 @@ export default function CompatibilitySection() {
   const [showGrid, setShowGrid] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShuffledAgents(shuffleAgents(agents));
   }, []);
 
   useEffect(() => {
     if (showGrid) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsInView(false);
       return;
     }

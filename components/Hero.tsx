@@ -22,12 +22,12 @@ export default function Hero() {
             <br className="hidden sm:block" />
             used by over{" "}
             <a
-              href="https://github.com/search?q=path%3AAGENTS.md&type=code"
+              href="https://github.com/search?q=path%3AAGENTS.md+NOT+is%3Afork+NOT+is%3Aarchived&type=code"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:no-underline"
             >
-              20k open-source projects
+              60k open-source projects
             </a>
             .
           </p>
@@ -37,7 +37,10 @@ export default function Hero() {
             predictable place to provide the context and instructions to help AI coding agents work on your project.
           </p>
 
-        <div className="mt-6 flex gap-4 flex-col sm:flex-row w-full sm:w-auto justify-center sm:justify-start">
+        <nav
+          aria-label="Primary actions"
+          className="mt-6 flex gap-4 flex-col sm:flex-row w-full sm:w-auto justify-center sm:justify-start"
+        >
           {/* Primary CTA — scroll to the Examples section */}
           <a
             href="#examples"
@@ -47,7 +50,7 @@ export default function Hero() {
           </a>
           {/* Secondary CTA — view on GitHub */}
           <a
-            href="https://github.com/openai/agents.md"
+            href="https://github.com/agentsmd/agents.md"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-gray-300 dark:border-gray-600 text-sm font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -55,7 +58,7 @@ export default function Hero() {
             <GitHubIcon className="w-4 h-4 text-current" />
             View on GitHub
           </a>
-        </div>
+        </nav>
         </div>
         <div className="w-full md:max-w-none">
           <CodeExample

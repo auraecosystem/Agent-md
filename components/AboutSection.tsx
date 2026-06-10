@@ -1,7 +1,7 @@
 import Section from "@/components/Section";
 
 const AboutSection = () => (
-  <Section title="About" className="pb-0" center maxWidthClass="max-w-3xl">
+  <Section id="about" title="About" className="pb-0" center maxWidthClass="max-w-3xl">
     <p className="max-w-3xl">
       AGENTS.md emerged from collaborative efforts across the AI software
       development ecosystem, including{" "}
@@ -17,7 +17,20 @@ const AboutSection = () => (
       regardless of which coding agent you use.
     </p>
 
-    
+    <p className="max-w-3xl mt-4">
+      AGENTS.md is now stewarded by the{" "}
+      <a href="https://aaif.io" className="underline hover:no-underline">
+        Agentic AI Foundation
+      </a>{" "}
+      under the Linux Foundation.{" "}
+      <a
+        href="https://openai.com/index/agentic-ai-foundation/"
+        className="underline hover:no-underline"
+      >
+        Learn more &rarr;
+      </a>
+    </p>
+
   </Section>
 );
 
