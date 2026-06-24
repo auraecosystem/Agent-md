@@ -126,7 +126,9 @@ export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {
             total = parseInt(match[1], 10);
           }
         } else {
-          const oneData = countRes.ok ? ((await countRes.json()) as any[]) : [];
+          const oneData = countRes.ok
+            ? ((await countRes.json()) as unknown[])
+            : [];
           total = oneData.length;
         }
       } catch {

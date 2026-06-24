@@ -1,12 +1,9 @@
 import React from "react";
-import ClipboardIcon from "./icons/ClipboardIcon";
 import CopyIcon from "./icons/CopyIcon";
 
 interface CodeExampleProps {
   /** Markdown content to display; falls back to default example if not provided */
   code?: string;
-  /** Optional URL for "View on GitHub" link */
-  href?: string;
   /** If true, render only the code block without the section wrapper */
   compact?: boolean;
   /** Override Tailwind height classes for the <pre> block */
@@ -125,7 +122,6 @@ function renderLineWithInlineCode(line: string): React.ReactNode {
  */
 export default function CodeExample({
   code,
-  href,
   compact = false,
   heightClass,
   centerVertically = false,

@@ -33,7 +33,6 @@ If you add or update dependencies remember to:
 | ------------------ | -------------------------------------------------- |
 | `npm run dev`      | Start the Next.js dev server with HMR.             |
 | `npm run lint`     | Run ESLint checks.                                 |
-| `npm run test`     | Execute the test suite (if present).               |
 | `npm run build`    | **Production build – _do not run during agent sessions_** |
 
 ---

@@ -269,12 +269,17 @@ export default function CompatibilitySection() {
   const [showGrid, setShowGrid] = useState(false);
 
   useEffect(() => {
-    setShuffledAgents(shuffleAgents(agents));
+    const frameId = window.requestAnimationFrame(() => {
+      setShuffledAgents(shuffleAgents(agents));
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+    };
   }, []);
 
   useEffect(() => {
     if (showGrid) {
-      setIsInView(false);
       return;
     }
 
@@ -301,7 +306,15 @@ export default function CompatibilitySection() {
         rect.right >= 0 &&
         rect.left <= window.innerWidth &&
         rect.top <= window.innerHeight;
-      setIsInView(isVisible);
+
+      const frameId = window.requestAnimationFrame(() => {
+        setIsInView(isVisible);
+      });
+
+      return () => {
+        window.cancelAnimationFrame(frameId);
+        observer.disconnect();
+      };
     }
 
     return () => {
