@@ -1,5 +1,14 @@
 # AGENTS.md
 
+<p align="center">
+  <a href="https://www.atlascloud.ai/?utm_source=github&utm_medium=link&utm_campaign=agents-md">
+    <img src="assets/atlas-cloud-logo.png" alt="Atlas Cloud" width="140" />
+  </a>
+  <br />
+  <sub><strong>Atlas Cloud</strong> Atlas Cloud provides OpenAI-compatible LLM APIs and async image/video generation APIs for AGENTS.md workflows and multimodal agent instructions.</sub>
+</p>
+
+
 ![AGENTS.md logo](./public/og.png)
 
 [AGENTS.md](https://agents.md) is a simple, open format for guiding coding agents.
