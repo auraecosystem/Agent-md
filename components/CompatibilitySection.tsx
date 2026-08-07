@@ -51,7 +51,7 @@ const agents: AgentEntry[] = [
   },
   {
     name: "Antigravity CLI",
-    url: "https://github.com/google-gemini/gemini-cli/blob/main/docs/get-started/configuration.md#available-settings-in-settingsjson",
+    url: "https://antigravity.google/docs/cli/best-practices#write-a-codebase-rule-file",
     from: "Google",
     imageSrc: "/logos/antigravity.svg",
   },
